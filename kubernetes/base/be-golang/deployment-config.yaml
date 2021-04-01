@@ -28,7 +28,7 @@ spec:
           kind: ImageStreamTag
           namespace: monorepo
           name: 'ocp-demo:golang'
-  replicas: 0
+  replicas: 1
   revisionHistoryLimit: 10
   test: false
   selector:
