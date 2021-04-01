@@ -4,7 +4,7 @@ metadata:
   name: be-rust
   namespace: monorepo
   labels:
-    app: backend
+    app: be-rust
     lang: rust
 spec:
   strategy:
@@ -23,7 +23,7 @@ spec:
       imageChangeParams:
         automatic: true
         containerNames:
-          - backend
+          - be-rust
         from:
           kind: ImageStreamTag
           namespace: monorepo
@@ -32,16 +32,16 @@ spec:
   revisionHistoryLimit: 10
   test: false
   selector:
-    app: backend
+    app: be-rust
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: backend
+        app: be-rust
         lang: rust
     spec:
       containers:
-        - name: backend
+        - name: be-rust
           image: ocp-demo:rust
           ports:
             - containerPort: 3030
