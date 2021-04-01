@@ -4,7 +4,7 @@ metadata:
   name: be-python
   namespace: monorepo
   labels:
-    app: backend
+    app: be-python
     lang: python
 spec:
   strategy:
@@ -23,7 +23,7 @@ spec:
       imageChangeParams:
         automatic: true
         containerNames:
-          - backend
+          - be-python
         from:
           kind: ImageStreamTag
           namespace: monorepo
@@ -32,16 +32,16 @@ spec:
   revisionHistoryLimit: 10
   test: false
   selector:
-    app: backend
+    app: be-python
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: backend
+        app: be-python
         lang: python
     spec:
       containers:
-        - name: backend
+        - name: be-python
           image: ocp-demo:python
           ports:
             - containerPort: 3030
