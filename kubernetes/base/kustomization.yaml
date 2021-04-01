@@ -14,7 +14,7 @@ resources:
   - be-rust/deployment-config.yaml    
 # Frontend
   - fe-node/build-config.yaml
-#- fe-node/deployment-config.yaml     
+  - fe-node/deployment-config.yaml     
 # Infra Tasks
   - infra/route-fe.yaml
   - infra/service.yaml
