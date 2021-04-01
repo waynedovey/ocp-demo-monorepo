@@ -5,6 +5,7 @@ resources:
   - infra/image-builder.yaml
 # Golang
   - be-golang/build-config.yaml
+  - be-golang/deployment-config.yaml
 # Python
   - be-python/build-config.yaml
 # Rust
