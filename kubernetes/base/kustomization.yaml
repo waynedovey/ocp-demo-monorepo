@@ -8,6 +8,7 @@ resources:
   - be-golang/deployment-config.yaml
 # Python
   - be-python/build-config.yaml
+  - be-python/deployment-config.yaml  
 # Rust
   - be-rust/build-config.yaml
 # Frontend
