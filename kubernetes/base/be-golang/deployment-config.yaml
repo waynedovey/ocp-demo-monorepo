@@ -4,7 +4,7 @@ metadata:
   name: be-golang
   namespace: monorepo
   labels:
-    app: backend
+    app: be-golang
     lang: golang
 spec:
   strategy:
@@ -23,7 +23,7 @@ spec:
       imageChangeParams:
         automatic: true
         containerNames:
-          - backend
+          - be-golang
         from:
           kind: ImageStreamTag
           namespace: monorepo
@@ -32,16 +32,16 @@ spec:
   revisionHistoryLimit: 10
   test: false
   selector:
-    app: backend
+    app: be-golang
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: backend
+        app: be-golang
         lang: golang
     spec:
       containers:
-        - name: backend
+        - name: be-golang
           image: ocp-demo:golang
           ports:
             - containerPort: 3030
