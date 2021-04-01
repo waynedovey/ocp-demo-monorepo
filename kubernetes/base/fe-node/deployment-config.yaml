@@ -4,7 +4,7 @@ metadata:
   name: fe-node
   namespace: monorepo
   labels:
-    app: frontend
+    app: fe-node
     lang: node
 spec:
   strategy:
@@ -23,7 +23,7 @@ spec:
       imageChangeParams:
         automatic: true
         containerNames:
-          - backend
+          - fe-node
         from:
           kind: ImageStreamTag
           namespace: monorepo
@@ -32,16 +32,16 @@ spec:
   revisionHistoryLimit: 10
   test: false
   selector:
-    app: frontend
+    app: fe-node
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: frontend
+        app: fe-node
         lang: node
     spec:
       containers:
-        - name: frontend
+        - name: fe-node
           image: ocp-demo:node
           ports:
             - containerPort: 3030
