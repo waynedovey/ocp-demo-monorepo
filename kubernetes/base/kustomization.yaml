@@ -5,17 +5,13 @@ resources:
   - infra/image-builder.yaml
 # Golang
   - be-golang/build-config.yaml
-  - be-golang/deployment-config.yaml
 # Python
   - be-python/build-config.yaml
-  - be-python/deployment-config.yaml
 # Rust
   - be-rust/build-config.yaml
-  - be-rust/deployment-config.yaml
 # Frontend
   - fe-node/build-config.yaml
-  - fe-node/deployment-config.yaml
-  - fe-node/service.yaml
+  - fe-node/servce.yaml
 # Infra Tasks
   - infra/route-be.yaml
   - infra/route-fe.yaml
